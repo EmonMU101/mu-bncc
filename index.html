@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Metropolitan University BNCC Platoon</title>
-  <!-- Font: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -13,188 +12,30 @@
   <script src="/_sdk/element_sdk.js"></script>
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    html, body {
-      height: 100%;
-      width: 100%;
-    }
-    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; width: 100%; }
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #f5f1ec; 
       color: #111111; 
     }
-
-    .app-wrapper {
-      width: 100%;
-      height: 100%;
-      overflow-y: auto;
-      padding-top: 24px; /* Reduced top padding */
-    }
-
-    .hero-title {
-      font-size: 56px; 
-      font-weight: 500;
-      margin-bottom: 12px;
-      letter-spacing: -1.4px;
-      color: #111111;
-    }
-
-    .hero-subtitle {
-      font-size: 18px; 
-      font-weight: 400;
-      color: #626260; 
-      line-height: 1.5;
-    }
-
-    .section-title {
-      font-size: 32px; /* Slightly smaller for tighter layout */
-      font-weight: 500;
-      color: #111111;
-      margin-bottom: 24px; /* Reduced from 48px */
-      text-align: center;
-      letter-spacing: -0.8px;
-    }
-
-    .hero-section {
-      background: transparent;
-      padding: 48px 20px 24px; /* Tightened hero area */
-      text-align: center;
-      animation: slideDown 0.8s ease-out;
-    }
-
-    .section {
-      padding: 48px 20px; /* Reduced from 96px */
-      max-width: 1280px;
-      margin: 0 auto;
-      animation: fadeInUp 0.8s ease-out;
-    }
-
-    .content-card {
-      background: #ffffff; 
-      padding: 24px; /* Slightly tighter padding */
-      border-radius: 16px; 
-      margin-bottom: 16px; /* Reduced from 24px */
-      border: 1px solid #d3cec6; 
-      transition: border-color 0.3s ease;
-    }
-
-    .content-card:hover {
-      border-color: #111111;
-    }
-
-    .content-card h3 {
-      font-size: 20px; 
-      color: #111111;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 500;
-    }
-
-    .stats-container {
-      background: transparent;
-      padding: 12px 20px 24px;
-      max-width: 1280px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px; /* Tighter gap */
-    }
-
-    .stat-box {
-      text-align: center;
-      padding: 24px;
-      background: #ffffff;
-      border: 1px solid #d3cec6;
-      border-radius: 12px;
-    }
-
-    .stat-number {
-      font-size: 48px; /* Slightly smaller for density */
-      font-weight: 500;
-      margin-bottom: 4px;
-      color: #111111;
-      letter-spacing: -1px;
-    }
-
-    .stat-label {
-      font-size: 14px;
-      font-weight: 500;
-      color: #626260;
-    }
-
-    .cadet-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-      margin-top: 16px;
-    }
-
-    .cadet-card {
-      background: #ffffff;
-      border-radius: 12px; 
-      border: 1px solid #d3cec6;
-      animation: fadeInUp 0.6s ease-out;
-    }
-
-    .cadet-header {
-      padding: 16px 20px;
-      border-bottom: 1px solid #f5f1ec; 
-    }
-
-    .cadet-name {
-      font-size: 17px;
-      font-weight: 500;
-      color: #111111;
-    }
-
-    .cadet-body {
-      padding: 16px 20px;
-    }
-
-    .cadet-info {
-      display: flex;
-      margin-bottom: 8px;
-      font-size: 13px;
-      color: #626260;
-      gap: 10px;
-    }
-
-    .leadership-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-      margin-top: 12px;
-    }
-
-    .leadership-card {
-      background: #ffffff;
-      padding: 24px;
-      border-radius: 12px;
-      border: 1px solid #d3cec6;
-    }
-
-    .footer {
-      padding: 48px 20px;
-      margin-top: 24px;
-      border-top: 1px solid #d3cec6;
-    }
-
-    @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    .app-wrapper { width: 100%; height: 100%; overflow-y: auto; padding-top: 24px; }
+    .hero-section { background: transparent; padding: 48px 20px 24px; text-align: center; }
+    .hero-title { font-size: 56px; font-weight: 500; margin-bottom: 12px; letter-spacing: -1.4px; }
+    .hero-subtitle { font-size: 18px; color: #626260; line-height: 1.5; }
+    .section { padding: 48px 20px; max-width: 1280px; margin: 0 auto; }
+    .section-title { font-size: 32px; font-weight: 500; margin-bottom: 24px; text-align: center; letter-spacing: -0.8px; }
+    .stats-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 1280px; margin: 0 auto; padding: 12px 20px 24px; }
+    .stat-box { text-align: center; padding: 24px; background: #ffffff; border: 1px solid #d3cec6; border-radius: 12px; }
+    .stat-number { font-size: 48px; font-weight: 500; margin-bottom: 4px; letter-spacing: -1px; }
+    .cadet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 16px; }
+    .cadet-card { background: #ffffff; border-radius: 12px; border: 1px solid #d3cec6; }
+    .cadet-header { padding: 16px 20px; border-bottom: 1px solid #f5f1ec; }
+    .cadet-name { font-size: 17px; font-weight: 500; color: #111111; margin-bottom: 4px; }
+    .cadet-name-bn { font-size: 13px; color: #626260; margin-bottom: 8px; }
+    .rank-badge { display: inline-block; background: #f5f1ec; padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 12px; }
+    .cadet-body { padding: 16px 20px; font-size: 13px; color: #626260; }
+    .footer { padding: 48px 20px; margin-top: 24px; border-top: 1px solid #d3cec6; text-align: center; color: #7b7b78; }
   </style>
  </head>
  <body>
@@ -202,10 +43,10 @@
    <section class="hero-section">
     <div class="max-w-6xl mx-auto">
      <div style="margin-bottom: 24px;">
-      <img src="Bncc_logo.png" alt="BNCC Platoon Logo" width="120" height="120" style="margin: 0 auto; display: block; border-radius: 50%;">
+      <img src="Bncc_logo.png" alt="BNCC Logo" width="120" height="120" style="margin: 0 auto; border-radius: 50%;">
      </div>
-     <h1 class="hero-title" id="heroTitle">Metropolitan University BNCC Platoon</h1>
-     <p class="hero-subtitle" id="heroSubtitle">Building Leaders, Shaping the Future</p>
+     <h1 class="hero-title">Metropolitan University BNCC Platoon</h1>
+     <p class="hero-subtitle">Building Leaders, Shaping the Future</p>
     </div>
    </section>
 
@@ -213,34 +54,10 @@
     <div class="stat-box"><div class="stat-number">30</div><div class="stat-label">Active Cadets</div></div>
     <div class="stat-box"><div class="stat-number">1</div><div class="stat-label">Sergeant</div></div>
     <div class="stat-box"><div class="stat-number">3</div><div class="stat-label">Corporals</div></div>
-    <div class="stat-box"><div class="stat-number">3</div><div class="stat-label">Lance Corporals</div></div>
+    <div class="stat-box"><div class="stat-number">2</div><div class="stat-label">Lance Corporals</div></div>
    </div>
 
    <section class="section">
-    <h2 class="section-title">The Foundation &amp; Vision</h2>
-    <div class="content-card">
-     <h3><i data-lucide="target" style="width: 18px; height: 18px;"></i> Our Mission</h3>
-     <p>The Bangladesh National Cadet Corps (BNCC) is a voluntary organization that works to shape young students into disciplined, confident, and responsible citizens. Guided by the Bangladesh Army, BNCC provides leadership and military based training.</p>
-    </div>
-   </section>
-
-   <section class="section" style="padding-top: 0;">
-    <h2 class="section-title">Leadership &amp; Guidance</h2>
-    <div class="leadership-grid">
-     <div class="leadership-card">
-      <h4>Current Leadership</h4>
-      <p><strong>PUO:</strong> Abu Yusuf Musa</p>
-      <p><strong>Army Staff:</strong> Jewel</p>
-     </div>
-     <div class="leadership-card">
-      <h4>Founding Leadership</h4>
-      <p><strong>First PUO:</strong> Syeda Nazmur Siha Muna</p>
-      <p><strong>Army Staff:</strong> Nazrul Islam</p>
-     </div>
-    </div>
-   </section>
-
-   <section class="section" style="padding-top: 0;">
     <h2 class="section-title">Cadet List</h2>
     <div class="cadet-grid" id="cadetGrid"></div>
    </section>
@@ -252,36 +69,48 @@
 
   <script>
     const cadets = [
-      { id: '25071752', name: 'Soleman Hossen Ashik', nameBn: 'মোঃ সোলেমান হোসেন আশিক', dob: '23/02/2004', blood: 'B+', dept: 'EEE', roll: '231-141-012', rank: 'Sergeant' },
-      { id: '25071753', name: 'MD Shafiul Alam Chowdhury', nameBn: 'মোঃ শাফিউল আলম চৌধুরী', dob: '02/12/2002', blood: 'O+', dept: 'CSE', roll: '231-115-210', rank: 'Corporal' },
-      { id: '25071754', name: 'Rafat Ahmed Chowdhury', nameBn: 'রাফাত আহমদ চৌধুরী', dob: '13/03/2003', blood: 'B+', dept: 'BBA', roll: '231-116-069', rank: 'Corporal' },
-      { id: '25071755', name: 'Abdullah Abu Sayad', nameBn: 'আব্দুল্লাহ আবু সায়াদ', dob: '16/02/2003', blood: 'A+ve', dept: 'EEE', roll: '232-141-012', rank: 'Corporal' },
-      { id: '25071756', name: 'Md. Saiful Islam', nameBn: 'মোঃ সাইফুল ইসলাম', dob: '03/04/2003', blood: 'O+', dept: 'English', roll: '232-114-042', rank: 'Lance Corporal' },
-      { id: '25071757', name: 'Arna Paul', nameBn: 'অর্ণা পাল', dob: '03/06/2003', blood: 'A+', dept: 'CSE', roll: '232-115-071', rank: 'Lance Corporal' },
-      { id: '25071758', name: 'Shrimoti Pritela Rani Das', nameBn: 'শ্রীমতি প্রীতিলা রানী দাস', dob: '25/07/2003', blood: 'AB+', dept: 'CSE', roll: '232-115-359', rank: 'Lance Corporal' }
+      { id: '25071751', name: 'Joynal Abedin Quraishi', nameBn: 'জয়নাল আবেদীন কোরেশী', rank: 'Cadet' },
+      { id: '25071752', name: 'Soleman Hossen Ashik', nameBn: 'মোঃ সোলেমান হোসেন আশিক', rank: 'Corporal' },
+      { id: '25071753', name: 'MD Shafiul Alam Chowdhury', nameBn: 'মোঃ শাফিউল আলম চৌধুরী', rank: 'Sergeant' },
+      { id: '25071754', name: 'Rafat Ahmed Chowdhury', nameBn: 'রাফাত আহমদ চৌধুরী', rank: 'Lance Corporal' },
+      { id: '25071755', name: 'Abdullah Abu Sayad', nameBn: 'আব্দুল্লাহ আবু সায়াদ', rank: 'Cadet' },
+      { id: '25071756', name: 'Md. Saiful Islam', nameBn: 'মোঃ সাইফুল ইসলাম', rank: 'Cadet' },
+      { id: '25071757', name: 'Arna Paul', nameBn: 'অর্ণা পাল', rank: 'Cadet' },
+      { id: '25071758', name: 'Shrimoti Pritela Rani Das', nameBn: 'শ্রীমতি প্রীতিলা রানী দাস', rank: 'Corporal' },
+      { id: '25071760', name: 'Maisha Tarannum Newaz', nameBn: 'মাইশা তারান্নুম নেওয়াজ', rank: 'Cadet' },
+      { id: '25071761', name: 'Sajib Ifroyim Toju', nameBn: 'সজীব ইফ্রয়ীম তজু', rank: 'Cadet' },
+      { id: '25071762', name: 'Rahad Ahmed Emon', nameBn: 'রাহাদ আহমদ ইমন', rank: 'Corporal' },
+      { id: '25071763', name: 'Somir Singha', nameBn: 'সমীর সিংহ', rank: 'Cadet' },
+      { id: '25071764', name: 'Bari Rah', nameBn: 'বারি রাহ', rank: 'Cadet' },
+      { id: '25071765', name: 'Gupinath Talukdar', nameBn: 'গোপীনাথ তালুকদার', rank: 'Cadet' },
+      { id: '25071766', name: 'Jewel', nameBn: 'জুয়েল', rank: 'Cadet' },
+      { id: '25071767', name: 'Shahriar Rahman Sakib', nameBn: 'শাহরিয়ার রহমান সাকিব', rank: 'Lance Corporal' },
+      { id: '25071770', name: 'Md. Suyem Ahmed Samir', nameBn: 'মোঃ সোয়েম আহমদ সামীর', rank: 'Cadet' },
+      { id: '25071771', name: 'Esheta Jahan', nameBn: 'ঈশিতা জাহান', rank: 'Cadet' },
+      { id: '25071773', name: 'Omi Ahmed Prantho', nameBn: 'অমি আহমেদ প্রান্ত', rank: 'Cadet' },
+      { id: '25071774', name: 'Sudeshna Roy Pima', nameBn: 'সুদেষ্ণা রায় পিমা', rank: 'Cadet' },
+      { id: '25071775', name: 'Hridoy Kumar Singha', nameBn: 'হ্রিদয় কুমার সিংহ', rank: 'Cadet' },
+      { id: '25071776', name: 'Md. Jubair Hossain', nameBn: 'মোঃ জুবায়ের হোসাইন', rank: 'Cadet' },
+      { id: '25071778', name: 'Farjana Begum', nameBn: 'ফারজানা বেগম', rank: 'Cadet' },
+      { id: '25071779', name: 'Jannatul Ferdous Inshira', nameBn: 'জান্নাতুল ফারদৌস ইনশিরা', rank: 'Cadet' }
     ];
 
     function renderCadets() {
       const grid = document.getElementById('cadetGrid');
-      const rankWeights = {'Sergeant': 1, 'Corporal': 2, 'Lance Corporal': 3, 'Cadet': 4};
-      const sorted = [...cadets].sort((a, b) => (rankWeights[a.rank] || 5) - (rankWeights[b.rank] || 5));
+      const weights = {'Sergeant': 1, 'Corporal': 2, 'Lance Corporal': 3, 'Cadet': 4};
+      const sorted = [...cadets].sort((a, b) => weights[a.rank] - weights[b.rank]);
 
-      grid.innerHTML = sorted.map(cadet => `
+      grid.innerHTML = sorted.map(c => `
         <div class="cadet-card">
           <div class="cadet-header">
-            <div class="cadet-name">${cadet.name}</div>
-            <div class="cadet-info"><span style="background:#f5f1ec; padding:2px 6px; border-radius:4px; font-weight:500;">${cadet.rank}</span></div>
+            <div class="cadet-name">${c.name}</div>
+            <div class="cadet-name-bn">${c.nameBn}</div>
+            <div class="rank-badge">${c.rank}</div>
           </div>
-          <div class="cadet-body">
-            <div class="cadet-info">ID: ${cadet.id}</div>
-            <div class="cadet-info">Dept: ${cadet.dept}</div>
-            <div class="cadet-info">Blood: ${cadet.blood}</div>
-          </div>
+          <div class="cadet-body">ID: ${c.id}</div>
         </div>
       `).join('');
-      lucide.createIcons();
     }
-
     document.addEventListener('DOMContentLoaded', renderCadets);
   </script>
  </body>
