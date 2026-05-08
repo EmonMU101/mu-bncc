@@ -24,69 +24,64 @@
       width: 100%;
     }
     
-    /* Intercom Base Canvas & Text */
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f5f1ec; /* {colors.canvas} */
-      color: #111111; /* {colors.ink} */
+      background: #f5f1ec; 
+      color: #111111; 
     }
 
     .app-wrapper {
       width: 100%;
       height: 100%;
       overflow-y: auto;
-      padding-top: 48px;
+      padding-top: 24px; /* Reduced top padding */
     }
 
-    /* Typography Hierarchy */
     .hero-title {
-      font-size: 56px; /* {typography.display-lg} */
+      font-size: 56px; 
       font-weight: 500;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       letter-spacing: -1.4px;
       color: #111111;
     }
 
     .hero-subtitle {
-      font-size: 18px; /* {typography.body-lg} */
+      font-size: 18px; 
       font-weight: 400;
-      color: #626260; /* {colors.ink-muted} */
+      color: #626260; 
       line-height: 1.5;
     }
 
     .section-title {
-      font-size: 40px; /* {typography.display-md} */
+      font-size: 32px; /* Slightly smaller for tighter layout */
       font-weight: 500;
       color: #111111;
-      margin-bottom: 48px;
+      margin-bottom: 24px; /* Reduced from 48px */
       text-align: center;
       letter-spacing: -0.8px;
     }
 
-    /* Layout & Spacing */
     .hero-section {
       background: transparent;
-      padding: 64px 20px 48px;
+      padding: 48px 20px 24px; /* Tightened hero area */
       text-align: center;
       animation: slideDown 0.8s ease-out;
     }
 
     .section {
-      padding: 96px 20px; /* {spacing.section} */
+      padding: 48px 20px; /* Reduced from 96px */
       max-width: 1280px;
       margin: 0 auto;
       animation: fadeInUp 0.8s ease-out;
     }
 
-    /* Cards - Intercom Surface 1 */
     .content-card {
-      background: #ffffff; /* {colors.surface-1} */
-      padding: 32px; /* {spacing.xl} */
-      border-radius: 16px; /* {rounded.xl} - prominent content */
-      margin-bottom: 24px;
-      border: 1px solid #d3cec6; /* {colors.hairline} */
+      background: #ffffff; 
+      padding: 24px; /* Slightly tighter padding */
+      border-radius: 16px; 
+      margin-bottom: 16px; /* Reduced from 24px */
+      border: 1px solid #d3cec6; 
       transition: border-color 0.3s ease;
-      box-shadow: none; /* Intercom flat aesthetic */
     }
 
     .content-card:hover {
@@ -94,483 +89,200 @@
     }
 
     .content-card h3 {
-      font-size: 22px; /* {typography.card-title} */
+      font-size: 20px; 
       color: #111111;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       font-weight: 500;
-      letter-spacing: -0.3px;
     }
 
-    .content-card h3 i {
-      color: #111111; /* Icons match ink */
-    }
-
-    .content-card p {
-      line-height: 1.50;
-      color: #626260; /* {colors.ink-muted} */
-      font-size: 16px; /* {typography.body} */
-      font-weight: 400;
-    }
-
-    .content-card ul {
-      margin-top: 16px;
-      margin-left: 20px;
-      line-height: 1.50;
-      color: #626260;
-      font-size: 16px;
-    }
-
-    /* Stats */
     .stats-container {
       background: transparent;
-      padding: 24px 20px 48px;
+      padding: 12px 20px 24px;
       max-width: 1280px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px; /* Tighter gap */
     }
 
     .stat-box {
       text-align: center;
-      padding: 32px;
+      padding: 24px;
       background: #ffffff;
       border: 1px solid #d3cec6;
       border-radius: 12px;
     }
 
     .stat-number {
-      font-size: 56px; /* {typography.display-lg} */
+      font-size: 48px; /* Slightly smaller for density */
       font-weight: 500;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       color: #111111;
-      letter-spacing: -1.4px;
-      line-height: 1.0;
+      letter-spacing: -1px;
     }
 
     .stat-label {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 500;
       color: #626260;
     }
 
-    /* Cadet Grid */
     .cadet-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 24px;
-      margin-top: 32px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
     }
 
     .cadet-card {
       background: #ffffff;
-      border-radius: 12px; /* {rounded.lg} */
-      overflow: hidden;
+      border-radius: 12px; 
       border: 1px solid #d3cec6;
-      transition: all 0.3s ease;
       animation: fadeInUp 0.6s ease-out;
     }
 
-    .cadet-card:hover {
-      border-color: #111111;
-    }
-
     .cadet-header {
-      background: #ffffff;
-      color: #111111;
-      padding: 24px;
-      border-bottom: 1px solid #f5f1ec; /* Soft separator */
+      padding: 16px 20px;
+      border-bottom: 1px solid #f5f1ec; 
     }
 
     .cadet-name {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 500;
-      margin-bottom: 4px;
-      letter-spacing: -0.1px;
-    }
-
-    .cadet-name-bn {
-      font-size: 14px; /* {typography.body-sm} */
-      font-weight: 400;
-      color: #626260;
+      color: #111111;
     }
 
     .cadet-body {
-      padding: 24px;
-      background: #ffffff;
+      padding: 16px 20px;
     }
 
     .cadet-info {
       display: flex;
-      align-items: flex-start;
-      margin-bottom: 12px;
-      font-size: 14px;
-      color: #626260;
-      gap: 12px;
-    }
-
-    .cadet-info i {
-      width: 16px;
-      height: 16px;
-      color: #111111;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .cadet-label {
-      font-weight: 500;
-      color: #111111;
-      min-width: 60px;
-    }
-
-    .rank-badge {
-      display: inline-block;
-      background: #f5f1ec;
-      padding: 2px 8px;
-      border-radius: 4px; /* {rounded.xs} */
-      color: #111111;
-      font-weight: 500;
+      margin-bottom: 8px;
       font-size: 13px;
+      color: #626260;
+      gap: 10px;
     }
 
-    /* Leadership Grid */
     .leadership-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 32px;
+      gap: 16px;
+      margin-top: 12px;
     }
 
     .leadership-card {
       background: #ffffff;
-      padding: 32px;
-      border-radius: 16px;
+      padding: 24px;
+      border-radius: 12px;
       border: 1px solid #d3cec6;
     }
 
-    .leadership-card h4 {
-      color: #111111;
-      margin-bottom: 16px;
-      font-size: 18px;
-      font-weight: 500;
-    }
-
-    .leadership-card p {
-      color: #626260;
-      line-height: 1.50;
-      font-size: 16px;
-    }
-    
-    .leadership-card strong {
-      color: #111111;
-      font-weight: 500;
-    }
-
-    /* Footer */
     .footer {
-      background: transparent;
-      color: #7b7b78; /* {colors.ink-subtle} */
-      text-align: center;
-      padding: 64px 20px;
-      margin-top: 48px;
+      padding: 48px 20px;
+      margin-top: 24px;
       border-top: 1px solid #d3cec6;
     }
 
-    .footer p {
-      font-size: 14px; /* {typography.caption} */
-      line-height: 1.50;
-    }
-
-    .highlight-text {
-      color: #111111;
-      font-weight: 500;
-    }
-
-    /* Animations */
     @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-20px); }
+      from { opacity: 0; transform: translateY(-10px); }
       to { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
-  <style>body { box-sizing: border-box; }</style>
  </head>
  <body>
   <div class="app-wrapper">
-   <!-- Hero Section -->
    <section class="hero-section">
     <div class="max-w-6xl mx-auto">
-     <div style="margin-bottom: 32px;">
-      <!-- Custom User Logo Inserted Here -->
-      <img src="Bncc_logo.png" alt="BNCC Platoon Logo" width="140" height="140" style="margin: 0 auto; display: block; border-radius: 50%;">
+     <div style="margin-bottom: 24px;">
+      <img src="Bncc_logo.png" alt="BNCC Platoon Logo" width="120" height="120" style="margin: 0 auto; display: block; border-radius: 50%;">
      </div>
      <h1 class="hero-title" id="heroTitle">Metropolitan University BNCC Platoon</h1>
      <p class="hero-subtitle" id="heroSubtitle">Building Leaders, Shaping the Future</p>
     </div>
    </section>
 
-   <!-- Stats Section -->
    <div class="stats-container">
-    <div class="stat-box">
-     <div class="stat-number">30</div>
-     <div class="stat-label">Active Cadets</div>
-    </div>
-    <div class="stat-box">
-     <div class="stat-number">1</div>
-     <div class="stat-label">Sergeant</div>
-    </div>
-    <div class="stat-box">
-     <div class="stat-number">3</div>
-     <div class="stat-label">Corporals</div>
-    </div>
-    <div class="stat-box">
-     <div class="stat-number">3</div>
-     <div class="stat-label">Lance Corporals</div>
-    </div>
+    <div class="stat-box"><div class="stat-number">30</div><div class="stat-label">Active Cadets</div></div>
+    <div class="stat-box"><div class="stat-number">1</div><div class="stat-label">Sergeant</div></div>
+    <div class="stat-box"><div class="stat-number">3</div><div class="stat-label">Corporals</div></div>
+    <div class="stat-box"><div class="stat-number">3</div><div class="stat-label">Lance Corporals</div></div>
    </div>
 
-   <!-- Foundation & Vision Section -->
    <section class="section">
     <h2 class="section-title">The Foundation &amp; Vision</h2>
     <div class="content-card">
-     <h3><i data-lucide="target" style="width: 20px; height: 20px;"></i> Our Mission</h3>
-     <p>The Bangladesh National Cadet Corps (BNCC) is a voluntary organization that works to shape young students into disciplined, confident, and responsible citizens. Guided by the Bangladesh Army, BNCC provides leadership and military based training that helps students develop patriotism, teamwork, dedication, and the courage to face real life challenges.</p>
-    </div>
-    <div class="content-card">
-     <h3><i data-lucide="heart" style="width: 20px; height: 20px;"></i> Our Values</h3>
-     <p>Alongside physical and tactical training, BNCC also encourages cadets to take part in social welfare activities, disaster response programs, and community service, helping them grow both as individuals and future leaders of the nation. Metropolitan University BNCC Platoon proudly carries the spirit and values of this respected organization. Through commitment, discipline, and unity, the platoon motivates students to become skilled, compassionate, and socially responsible individuals who are always ready to serve the country and contribute positively to society.</p>
+     <h3><i data-lucide="target" style="width: 18px; height: 18px;"></i> Our Mission</h3>
+     <p>The Bangladesh National Cadet Corps (BNCC) is a voluntary organization that works to shape young students into disciplined, confident, and responsible citizens. Guided by the Bangladesh Army, BNCC provides leadership and military based training.</p>
     </div>
    </section>
 
-   <!-- Igniting the Movement Section -->
-   <section class="section">
-    <h2 class="section-title">Igniting the Movement</h2>
-    <div class="content-card">
-     <h3><i data-lucide="flame" style="width: 20px; height: 20px;"></i> Our Journey</h3>
-     <p>Metropolitan University BNCC Platoon began its journey with the participation of nearly a hundred students. After a selection round held in May of last year, 24 cadets were officially chosen for the first batch. At the beginning, there were no ranks among the cadets, and the platoon was guided by a PUO and Army staff member.</p>
-    </div>
-    <div class="content-card">
-     <h3><i data-lucide="trending-up" style="width: 20px; height: 20px;"></i> Growth &amp; Development</h3>
-     <p>With time, dedication, and teamwork, the platoon has grown into a unit of 30 cadets. The platoon now proudly includes one Sergeant, three Corporals, three Lance Corporals, and the remaining cadets, all working together with discipline and commitment under the guidance of a new PUO and Army staff member.</p>
-    </div>
-   </section>
-
-   <!-- Leadership & Guidance Section -->
-   <section class="section">
+   <section class="section" style="padding-top: 0;">
     <h2 class="section-title">Leadership &amp; Guidance</h2>
-    <p style="text-align: center; color: #626260; margin-bottom: 48px; font-size: 16px;">Under dedicated leadership, our platoon continues to grow with discipline, dedication, and unity.</p>
     <div class="leadership-grid">
      <div class="leadership-card">
       <h4>Current Leadership</h4>
-      <p><strong>Professor Under Officer (PUO):</strong> Abu Yusuf Musa</p>
-      <p style="margin-top: 10px;"><strong>Army Staff Member:</strong> Jewel</p>
-      <p style="margin-top: 16px; font-size: 14px;">Guiding the platoon with discipline, dedication, and unity.</p>
+      <p><strong>PUO:</strong> Abu Yusuf Musa</p>
+      <p><strong>Army Staff:</strong> Jewel</p>
      </div>
      <div class="leadership-card">
       <h4>Founding Leadership</h4>
       <p><strong>First PUO:</strong> Syeda Nazmur Siha Muna</p>
-      <p style="margin-top: 10px;"><strong>Army Staff Member:</strong> Nazrul Islam</p>
-      <p style="margin-top: 16px; font-size: 14px;">Whose guidance and efforts established the foundation of our platoon.</p>
+      <p><strong>Army Staff:</strong> Nazrul Islam</p>
      </div>
     </div>
    </section>
 
-   <!-- Major Participation Section -->
-   <section class="section">
-    <h2 class="section-title">Major Participation</h2>
-    <div class="content-card">
-     <h3><i data-lucide="award" style="width: 20px; height: 20px;"></i> Our Achievements</h3>
-     <p>This Platoon has proudly participated in various national programs, camps, competitions, and official duties with discipline and dedication. Our cadets successfully represented the university in:</p>
-     <ul style="margin-top: 16px; margin-bottom: 16px; margin-left: 20px; line-height: 1.8;">
-      <li>GOC Guard of Honor</li>
-      <li>Battalion Camp Drill and Cultural Competitions</li>
-      <li>Debate and Chess Competitions</li>
-      <li>National Armed Forces Day 2025</li>
-      <li>Independence Day Drill</li>
-      <li>Victory Day Parade</li>
-      <li>Central Camp Band Training</li>
-      <li>BPL Duty, Election Duty, Prime Minister's Visit Duty</li>
-      <li>And many other important events</li>
-     </ul>
-     <p>Through every participation, our cadets demonstrated teamwork, leadership, professionalism, and the true spirit of BNCC, bringing pride and recognition to Metropolitan University.</p>
-    </div>
-   </section>
-
-   <!-- National Recognition Section -->
-   <section class="section">
-    <h2 class="section-title">National Recognition</h2>
-    <div class="content-card">
-     <h3><i data-lucide="star" style="width: 20px; height: 20px;"></i> Excellence Recognized</h3>
-     <p>Metropolitan University BNCC Platoon has earned notable recognition through its disciplined and outstanding performances at various national events. From receiving high praise during the GOC visit to winning medals and top positions in Battalion and Central Camps, including champion and runner-up titles in drill competitions, our cadets have consistently excelled.</p>
-     <p style="margin-top: 16px;">We have also achieved national recognition in cultural segments, proving our strength in both discipline and talent. Overall, in every event we took part in, we made our presence known through <span class="highlight-text">excellence, discipline, and pride.</span></p>
-    </div>
-   </section>
-
-   <!-- Cadet List Section -->
-   <section class="section">
+   <section class="section" style="padding-top: 0;">
     <h2 class="section-title">Cadet List</h2>
-    <p style="text-align: center; color: #626260; margin-bottom: 48px; font-size: 16px;">Meet the dedicated cadets of Metropolitan University BNCC Platoon</p>
-    <div class="cadet-grid" id="cadetGrid">
-     <!-- Cadets will be populated here -->
-    </div>
+    <div class="cadet-grid" id="cadetGrid"></div>
    </section>
 
-   <!-- Footer -->
    <footer class="footer">
     <p>© 2025 Metropolitan University BNCC Platoon. All rights reserved.</p>
-    <p style="margin-top: 12px; color: #9c9fa5;">Building Leaders, Shaping the Future</p>
    </footer>
   </div>
 
   <script>
-    // Cadet Data (Cleaned and Rank assigned)
     const cadets = [
-      { id: '25071752', name: 'Soleman Hossen Ashik', nameBn: 'মোঃ সোলেমান হোসেন আশিক', dob: '23/02/2004', blood: 'B+', email: 'solemanhossen857@gmail.com', phone: '01989043524', dept: 'EEE', roll: '231-141-012', cgpa: '3.2', rank: 'Sergeant' },
-      { id: '25071753', name: 'MD Shafiul Alam Chowdhury', nameBn: 'মোঃ শাফিউল আলম চৌধুরী', dob: '02/12/2002', blood: 'O+', email: 'shafiulrubu2121@gmail.com', phone: '1639401852', dept: 'CSE', roll: '231-115-210', cgpa: '3.2', rank: 'Corporal' },
-      { id: '25071754', name: 'Rafat Ahmed Chowdhury', nameBn: 'রাফাত আহমদ চৌধুরী', dob: '13/03/2003', blood: 'B+', email: 'rafatabir03@gmail.com', phone: '01902338231', dept: 'Business Administration', roll: '231-116-069', cgpa: '3.2', rank: 'Corporal' },
-      { id: '25071755', name: 'Abdullah Abu Sayad', nameBn: 'আব্দুল্লাহ আবু সায়াদ', dob: '16/02/2003', blood: 'A+ve', email: 'sayadhere100@gmail.com', phone: '01714678316', dept: 'EEE', roll: '232-141-012', cgpa: '3.1', rank: 'Corporal' },
-      { id: '25071756', name: 'Md. Saiful Islam', nameBn: 'মোঃ সাইফুল ইসলাম', dob: '03/04/2003', blood: 'O+', email: 'saiful03042003@gmail.com', phone: '01306438017', dept: 'Department of English', roll: '232-114-042', cgpa: '3.1', rank: 'Lance Corporal' },
-      { id: '25071757', name: 'Arna Paul', nameBn: 'অর্ণা পাল', dob: '03/06/2003', blood: 'A+', email: 'arnapaul40uni@gmail.com', phone: '01765273687', dept: 'CSE', roll: '232-115-071', cgpa: '2.3', rank: 'Lance Corporal' },
-      { id: '25071758', name: 'Shrimoti Pritela Rani Das', nameBn: 'শ্রীমতি প্রীতিলা রানী দাস', dob: '25/07/2003', blood: 'AB+', email: 'itsprithila@gmail.com', phone: '01908004648', dept: 'CSE', roll: '232-115-359', cgpa: '2.3', rank: 'Lance Corporal' },
-      { id: '25071760', name: 'Maisha Tarannum Newaz', nameBn: 'মাইশা তারান্নুম নেওয়াজ', dob: '06/11/2002', blood: 'A+', email: 'mtnewaz@gmail.com', phone: '01906237979', dept: 'CSE', roll: '241-115-095', cgpa: '2.2', rank: 'Cadet' },
-      { id: '25071761', name: 'Sajib Ifroyim Toju', nameBn: 'সজীব ইফ্রয়ীম তজু', dob: '25/09/2004', blood: 'O+', email: 'sajibifroyimtoju83@gmail.com', phone: '01781231549', dept: 'Law & Justice', roll: '241-113-039', cgpa: '2.2', rank: 'Cadet' },
-      { id: '25071762', name: 'Rahad Ahmed Emon', nameBn: 'রাহাদ আহমদ ইমন', dob: '23/12/2004', blood: 'O +ve', email: 'rahadahmedemon11@gmail.com', phone: '01826090928', dept: 'CSE', roll: '241-115-101', cgpa: '2.2', rank: 'Cadet' },
-      { id: '25071763', name: 'Somir Singha', nameBn: 'সমীর সিংহ', dob: '21/01/2005', blood: 'A+', email: 'somirsingha1018@gmail.com', phone: '01915701018', dept: 'CSE', roll: '241-115-130', cgpa: '2.2', rank: 'Cadet' },
-      { id: '25071764', name: 'Bari Rah', nameBn: 'বারি রাহ', dob: '25/12/2003', blood: 'O+', email: 'barirahahmed69@gmail.com', phone: '1331416408', dept: 'BBA', roll: '251-116-073', cgpa: '1.2', rank: 'Cadet' },
-      { id: '25071765', name: 'Gupinath Talukdar', nameBn: 'গোপীনাথ তালুকদার', dob: '27/09/2001', blood: 'B+', email: 'gupinathtdr@gmail.com', phone: '+.', dept: 'CSE', roll: '241-115-142', cgpa: '2.2', rank: 'Cadet' },
-      { id: '25071766', name: 'Jewel', nameBn: 'জুয়েল', dob: '10/01/2002', blood: 'A+', email: 'mdjewelsikder284@gmail.com', phone: '1746675957', dept: 'Law and Justice', roll: '241-113-037', cgpa: '2.2', rank: 'Cadet' },
-      { id: '25071767', name: 'Shahriar Rahman Sakib', nameBn: 'শাহরিয়ার রহমান সাকিব', dob: '30/06/2005', blood: 'AB(+)', email: 'sk121sakib@gmail.com', phone: '01834888792', dept: 'CSE', roll: '251-115-177', cgpa: '1.2', rank: 'Cadet' },
-      { id: '25071770', name: 'Md. Suyem Ahmed Samir', nameBn: 'মোঃ সোয়েম আহমদ সামীর', dob: '05/04/2006', blood: 'O+', email: 'samirahmedgd@gmail.com', phone: '01798414050', dept: 'CSE', roll: '251-115-124', cgpa: '1.2', rank: 'Cadet' },
-      { id: '25071771', name: 'Esheta Jahan', nameBn: 'ঈশিতা জাহান', dob: '11/08/2005', blood: 'A+', email: 'jerrychowdhury2005@gmail.com', phone: '01856136421', dept: 'Law & Justice', roll: '251-113-018', cgpa: '1.2', rank: 'Cadet' },
-      { id: '25071773', name: 'Omi Ahmed Prantho', nameBn: 'অমি আহমেদ প্রান্ত', dob: '05/03/2005', blood: 'AB+', email: 'omiahmedprantho327@gmail.com', phone: '01787861965', dept: 'Law and Justice', roll: '251-113-040', cgpa: '1.2', rank: 'Cadet' },
-      { id: '25071774', name: 'Sudeshna Roy Pima', nameBn: 'সুদেষ্ণা রায় পিমা', dob: '26/06/2003', blood: 'O+', email: 'sudeshnaroy148@gmail.com', phone: '01309284034', dept: 'CSE', roll: '242-115-148', cgpa: '2.1', rank: 'Cadet' },
-      { id: '25071775', name: 'Hridoy Kumar Singha', nameBn: 'হ্রিদয় কুমার সিংহ', dob: '14/12/2003', blood: 'A+', email: 'hridoykumarsingha1512@gmail.com', phone: '01787747414', dept: 'CSE', roll: '232-115-318', cgpa: '3.1', rank: 'Cadet' },
-      { id: '25071776', name: 'Md. Jubair Hossain', nameBn: 'মোঃ জুবায়ের হোসাইন', dob: '01/01/2003', blood: 'AB+', email: 'ahmedjubair2001@gmail.com', phone: '01602998794', dept: 'CSE', roll: '241-115-247', cgpa: '2.3', rank: 'Cadet' },
-      { id: '25071778', name: 'Farjana Begum', nameBn: 'ফারজানা বেগম', dob: '21/05/2003', blood: 'B+', email: 'farzanislam958@gmail.com', phone: '01621475357', dept: 'Law and Justice', roll: '253-113-007', cgpa: '1.1', rank: 'Cadet' },
-      { id: '25071779', name: 'Jannatul Ferdous Inshira', nameBn: 'জান্নাতুল ফারদৌস ইনশিরা', dob: '15/08/2005', blood: 'O+', email: 'inshirajannatul@gmail.com', phone: '01612496692', dept: 'English', roll: '-', cgpa: '1:1', rank: 'Cadet' }
+      { id: '25071752', name: 'Soleman Hossen Ashik', nameBn: 'মোঃ সোলেমান হোসেন আশিক', dob: '23/02/2004', blood: 'B+', dept: 'EEE', roll: '231-141-012', rank: 'Sergeant' },
+      { id: '25071753', name: 'MD Shafiul Alam Chowdhury', nameBn: 'মোঃ শাফিউল আলম চৌধুরী', dob: '02/12/2002', blood: 'O+', dept: 'CSE', roll: '231-115-210', rank: 'Corporal' },
+      { id: '25071754', name: 'Rafat Ahmed Chowdhury', nameBn: 'রাফাত আহমদ চৌধুরী', dob: '13/03/2003', blood: 'B+', dept: 'BBA', roll: '231-116-069', rank: 'Corporal' },
+      { id: '25071755', name: 'Abdullah Abu Sayad', nameBn: 'আব্দুল্লাহ আবু সায়াদ', dob: '16/02/2003', blood: 'A+ve', dept: 'EEE', roll: '232-141-012', rank: 'Corporal' },
+      { id: '25071756', name: 'Md. Saiful Islam', nameBn: 'মোঃ সাইফুল ইসলাম', dob: '03/04/2003', blood: 'O+', dept: 'English', roll: '232-114-042', rank: 'Lance Corporal' },
+      { id: '25071757', name: 'Arna Paul', nameBn: 'অর্ণা পাল', dob: '03/06/2003', blood: 'A+', dept: 'CSE', roll: '232-115-071', rank: 'Lance Corporal' },
+      { id: '25071758', name: 'Shrimoti Pritela Rani Das', nameBn: 'শ্রীমতি প্রীতিলা রানী দাস', dob: '25/07/2003', blood: 'AB+', dept: 'CSE', roll: '232-115-359', rank: 'Lance Corporal' }
     ];
 
-    // Element SDK Configuration
-    const defaultConfig = {
-      header_title: 'Metropolitan University BNCC Platoon',
-      header_subtitle: 'Building Leaders, Shaping the Future'
-    };
-
-    let config = { ...defaultConfig };
-
-    async function initializeElementSdk() {
-      if (!window.elementSdk) return;
-
-      window.elementSdk.init({
-        defaultConfig,
-        onConfigChange: async (newConfig) => {
-          config = newConfig;
-          document.getElementById('heroTitle').textContent = config.header_title || defaultConfig.header_title;
-          document.getElementById('heroSubtitle').textContent = config.header_subtitle || defaultConfig.header_subtitle;
-        },
-        mapToCapabilities: (config) => ({
-          recolorables: [],
-          borderables: [],
-          fontEditable: undefined,
-          fontSizeable: undefined
-        }),
-        mapToEditPanelValues: (config) => new Map([
-          ['header_title', config.header_title || defaultConfig.header_title],
-          ['header_subtitle', config.header_subtitle || defaultConfig.header_subtitle]
-        ])
-      });
-    }
-
-    // Render Cadet Cards (With Rank Sorting)
     function renderCadets() {
       const grid = document.getElementById('cadetGrid');
-      
-      // Rank Weights for Hierarchy Sorting
-      const rankWeights = {
-        'Sergeant': 1,
-        'Corporal': 2,
-        'Lance Corporal': 3,
-        'Cadet': 4
-      };
+      const rankWeights = {'Sergeant': 1, 'Corporal': 2, 'Lance Corporal': 3, 'Cadet': 4};
+      const sorted = [...cadets].sort((a, b) => (rankWeights[a.rank] || 5) - (rankWeights[b.rank] || 5));
 
-      // Create a sorted copy of the cadets array
-      const sortedCadets = [...cadets].sort((a, b) => {
-        const rankA = rankWeights[a.rank] || 5;
-        const rankB = rankWeights[b.rank] || 5;
-        
-        // Sort by rank first
-        if (rankA !== rankB) {
-          return rankA - rankB;
-        }
-        // Fallback to sorting by ID
-        return a.id.localeCompare(b.id);
-      });
-
-      // Map through sorted list and output HTML
-      grid.innerHTML = sortedCadets.map(cadet => `
+      grid.innerHTML = sorted.map(cadet => `
         <div class="cadet-card">
           <div class="cadet-header">
             <div class="cadet-name">${cadet.name}</div>
-            <div class="cadet-name-bn">${cadet.nameBn}</div>
+            <div class="cadet-info"><span style="background:#f5f1ec; padding:2px 6px; border-radius:4px; font-weight:500;">${cadet.rank}</span></div>
           </div>
           <div class="cadet-body">
-            <div class="cadet-info">
-              <span class="cadet-label">ID:</span>
-              <span>${cadet.id}</span>
-            </div>
-            ${cadet.rank ? `<div class="cadet-info">
-              <i data-lucide="star"></i>
-              <span class="cadet-label">Rank:</span>
-              <span class="rank-badge">${cadet.rank}</span>
-            </div>` : ''}
-            <div class="cadet-info">
-              <i data-lucide="calendar"></i>
-              <span class="cadet-label">DOB:</span>
-              <span>${cadet.dob}</span>
-            </div>
-            <div class="cadet-info">
-              <i data-lucide="droplet"></i>
-              <span class="cadet-label">Blood:</span>
-              <span>${cadet.blood}</span>
-            </div>
-            <div class="cadet-info">
-              <i data-lucide="building"></i>
-              <span class="cadet-label">Dept:</span>
-              <span>${cadet.dept}</span>
-            </div>
-            <div class="cadet-info">
-              <i data-lucide="hash"></i>
-              <span class="cadet-label">Roll:</span>
-              <span>${cadet.roll}</span>
-            </div>
-            <div class="cadet-info">
-              <i data-lucide="mail"></i>
-              <span class="cadet-label">Email:</span>
-              <span style="font-size: 0.9em; word-break: break-all;">${cadet.email}</span>
-            </div>
-            <div class="cadet-info">
-              <i data-lucide="phone"></i>
-              <span class="cadet-label">Phone:</span>
-              <span>${cadet.phone}</span>
-            </div>
+            <div class="cadet-info">ID: ${cadet.id}</div>
+            <div class="cadet-info">Dept: ${cadet.dept}</div>
+            <div class="cadet-info">Blood: ${cadet.blood}</div>
           </div>
         </div>
       `).join('');
-      
       lucide.createIcons();
     }
 
-    // Initialize on Page Load
-    document.addEventListener('DOMContentLoaded', () => {
-      initializeElementSdk();
-      renderCadets();
-    });
+    document.addEventListener('DOMContentLoaded', renderCadets);
   </script>
  </body>
 </html>
