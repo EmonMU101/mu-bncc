@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Metropolitan University BNCC Platoon</title>
+  <!-- Font: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -18,46 +19,83 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #f5f1ec; 
       color: #111111; 
+      -webkit-font-smoothing: antialiased;
     }
-    .app-wrapper { width: 100%; height: 100%; overflow-y: auto; padding-top: 24px; }
+    .app-wrapper { width: 100%; height: 100%; overflow-y: auto; padding-top: 16px; }
     
-    /* Typography & Spacing */
-    .hero-section { padding: 48px 20px 24px; text-align: center; }
-    .hero-title { font-size: 56px; font-weight: 500; margin-bottom: 12px; letter-spacing: -1.4px; }
-    .hero-subtitle { font-size: 18px; color: #626260; line-height: 1.5; }
+    /* Responsive Typography */
+    .hero-section { padding: 32px 16px 16px; text-align: center; }
+    .hero-title { 
+      font-size: clamp(32px, 8vw, 56px); /* Fluid typography for mobile */
+      font-weight: 500; 
+      margin-bottom: 12px; 
+      letter-spacing: -0.03em; 
+    }
+    .hero-subtitle { 
+      font-size: clamp(16px, 4vw, 18px); 
+      color: #626260; 
+      line-height: 1.5; 
+      max-width: 600px; 
+      margin: 0 auto;
+    }
     
-    .section { padding: 32px 20px; max-width: 1280px; margin: 0 auto; }
-    .section-title { font-size: 32px; font-weight: 500; margin-bottom: 20px; text-align: center; letter-spacing: -0.8px; }
+    .section { padding: 24px 16px; max-width: 1280px; margin: 0 auto; }
+    .section-title { 
+      font-size: clamp(24px, 6vw, 32px); 
+      font-weight: 500; 
+      margin-bottom: 20px; 
+      text-align: center; 
+      letter-spacing: -0.02em; 
+    }
     
-    /* Stats */
-    .stats-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 1280px; margin: 0 auto; padding: 12px 20px; }
-    .stat-box { text-align: center; padding: 24px; background: #ffffff; border: 1px solid #d3cec6; border-radius: 12px; }
-    .stat-number { font-size: 48px; font-weight: 500; margin-bottom: 4px; letter-spacing: -1px; }
-    .stat-label { font-size: 14px; font-weight: 500; color: #626260; }
+    /* Stats: 2x2 on mobile, 4-inline on desktop */
+    .stats-container { 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 12px; 
+      max-width: 1280px; 
+      margin: 0 auto; 
+      padding: 12px 16px; 
+    }
+    @media (min-width: 768px) {
+      .stats-container { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    }
+    .stat-box { text-align: center; padding: 16px; background: #ffffff; border: 1px solid #d3cec6; border-radius: 12px; }
+    .stat-number { font-size: clamp(32px, 5vw, 48px); font-weight: 500; margin-bottom: 4px; letter-spacing: -0.02em; }
+    .stat-label { font-size: 12px; font-weight: 500; color: #626260; text-transform: uppercase; letter-spacing: 0.05em; }
 
     /* Content Cards */
-    .content-card { background: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #d3cec6; margin-bottom: 16px; }
-    .content-card h3 { font-size: 20px; font-weight: 500; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-    .content-card p { font-size: 15px; line-height: 1.6; color: #626260; }
+    .content-card { background: #ffffff; padding: 20px; border-radius: 16px; border: 1px solid #d3cec6; margin-bottom: 16px; }
+    @media (min-width: 768px) { .content-card { padding: 24px; } }
+    .content-card h3 { font-size: 18px; font-weight: 500; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .content-card p { font-size: 14px; line-height: 1.6; color: #626260; }
 
-    /* Cadet Grid */
-    .cadet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 16px; }
-    .cadet-card { background: #ffffff; border-radius: 12px; border: 1px solid #d3cec6; }
-    .cadet-header { padding: 16px 20px; border-bottom: 1px solid #f5f1ec; }
-    .cadet-name { font-size: 17px; font-weight: 500; color: #111111; margin-bottom: 2px; }
-    .cadet-name-bn { font-size: 13px; color: #626260; margin-bottom: 6px; }
-    .rank-badge { display: inline-block; background: #f5f1ec; padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 12px; }
-    .cadet-body { padding: 16px 20px; font-size: 13px; color: #626260; }
+    /* Cadet Grid: Responsive columns */
+    .cadet-grid { 
+      display: grid; 
+      grid-template-columns: 1fr; 
+      gap: 12px; 
+      margin-top: 16px; 
+    }
+    @media (min-width: 640px) { .cadet-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .cadet-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
 
-    .footer { padding: 48px 20px; border-top: 1px solid #d3cec6; text-align: center; color: #7b7b78; }
+    .cadet-card { background: #ffffff; border-radius: 12px; border: 1px solid #d3cec6; overflow: hidden; }
+    .cadet-header { padding: 16px; border-bottom: 1px solid #f5f1ec; }
+    .cadet-name { font-size: 16px; font-weight: 500; color: #111111; margin-bottom: 2px; }
+    .cadet-name-bn { font-size: 12px; color: #626260; margin-bottom: 8px; }
+    .rank-badge { display: inline-block; background: #f5f1ec; padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px; }
+    .cadet-body { padding: 12px 16px; font-size: 12px; color: #626260; }
+
+    .footer { padding: 32px 16px; border-top: 1px solid #d3cec6; text-align: center; color: #7b7b78; font-size: 12px; }
   </style>
  </head>
  <body>
   <div class="app-wrapper">
    <section class="hero-section">
     <div class="max-w-6xl mx-auto">
-     <div style="margin-bottom: 24px;">
-      <img src="Bncc_logo.png" alt="BNCC Logo" width="120" height="120" style="margin: 0 auto; border-radius: 50%;">
+     <div style="margin-bottom: 16px;">
+      <img src="Bncc_logo.png" alt="BNCC Logo" width="100" height="100" style="margin: 0 auto; border-radius: 50%;">
      </div>
      <h1 class="hero-title">Metropolitan University BNCC Platoon</h1>
      <p class="hero-subtitle">Building Leaders, Shaping the Future</p>
@@ -65,10 +103,10 @@
    </section>
 
    <div class="stats-container">
-    <div class="stat-box"><div class="stat-number">30</div><div class="stat-label">Active Cadets</div></div>
-    <div class="stat-box"><div class="stat-number">1</div><div class="stat-label">Sergeant</div></div>
-    <div class="stat-box"><div class="stat-number">3</div><div class="stat-label">Corporals</div></div>
-    <div class="stat-box"><div class="stat-number">2</div><div class="stat-label">Lance Corporals</div></div>
+    <div class="stat-box"><div class="stat-number">30</div><div class="stat-label">Cadets</div></div>
+    <div class="stat-box"><div class="stat-number">1</div><div class="stat-label">SGT</div></div>
+    <div class="stat-box"><div class="stat-number">3</div><div class="stat-label">CPL</div></div>
+    <div class="stat-box"><div class="stat-number">2</div><div class="stat-label">LCPL</div></div>
    </div>
 
    <section class="section">
