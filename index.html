@@ -20,22 +20,36 @@
       color: #111111; 
     }
     .app-wrapper { width: 100%; height: 100%; overflow-y: auto; padding-top: 24px; }
-    .hero-section { background: transparent; padding: 48px 20px 24px; text-align: center; }
+    
+    /* Typography & Spacing */
+    .hero-section { padding: 48px 20px 24px; text-align: center; }
     .hero-title { font-size: 56px; font-weight: 500; margin-bottom: 12px; letter-spacing: -1.4px; }
     .hero-subtitle { font-size: 18px; color: #626260; line-height: 1.5; }
-    .section { padding: 48px 20px; max-width: 1280px; margin: 0 auto; }
-    .section-title { font-size: 32px; font-weight: 500; margin-bottom: 24px; text-align: center; letter-spacing: -0.8px; }
-    .stats-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 1280px; margin: 0 auto; padding: 12px 20px 24px; }
+    
+    .section { padding: 32px 20px; max-width: 1280px; margin: 0 auto; }
+    .section-title { font-size: 32px; font-weight: 500; margin-bottom: 20px; text-align: center; letter-spacing: -0.8px; }
+    
+    /* Stats */
+    .stats-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 1280px; margin: 0 auto; padding: 12px 20px; }
     .stat-box { text-align: center; padding: 24px; background: #ffffff; border: 1px solid #d3cec6; border-radius: 12px; }
     .stat-number { font-size: 48px; font-weight: 500; margin-bottom: 4px; letter-spacing: -1px; }
+    .stat-label { font-size: 14px; font-weight: 500; color: #626260; }
+
+    /* Content Cards */
+    .content-card { background: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #d3cec6; margin-bottom: 16px; }
+    .content-card h3 { font-size: 20px; font-weight: 500; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .content-card p { font-size: 15px; line-height: 1.6; color: #626260; }
+
+    /* Cadet Grid */
     .cadet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 16px; }
     .cadet-card { background: #ffffff; border-radius: 12px; border: 1px solid #d3cec6; }
     .cadet-header { padding: 16px 20px; border-bottom: 1px solid #f5f1ec; }
-    .cadet-name { font-size: 17px; font-weight: 500; color: #111111; margin-bottom: 4px; }
-    .cadet-name-bn { font-size: 13px; color: #626260; margin-bottom: 8px; }
+    .cadet-name { font-size: 17px; font-weight: 500; color: #111111; margin-bottom: 2px; }
+    .cadet-name-bn { font-size: 13px; color: #626260; margin-bottom: 6px; }
     .rank-badge { display: inline-block; background: #f5f1ec; padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 12px; }
     .cadet-body { padding: 16px 20px; font-size: 13px; color: #626260; }
-    .footer { padding: 48px 20px; margin-top: 24px; border-top: 1px solid #d3cec6; text-align: center; color: #7b7b78; }
+
+    .footer { padding: 48px 20px; border-top: 1px solid #d3cec6; text-align: center; color: #7b7b78; }
   </style>
  </head>
  <body>
@@ -58,6 +72,30 @@
    </div>
 
    <section class="section">
+    <h2 class="section-title">The Foundation & Vision</h2>
+    <div class="content-card">
+     <h3><i data-lucide="target" style="width: 18px; height: 18px;"></i> Our Mission</h3>
+     <p>The Bangladesh National Cadet Corps (BNCC) is a voluntary organization that works to shape young students into disciplined, confident, and responsible citizens. Guided by the Bangladesh Army, BNCC provides leadership and military based training that helps students develop patriotism, teamwork, dedication, and the courage to face real life challenges.</p>
+    </div>
+    <div class="content-card">
+     <h3><i data-lucide="heart" style="width: 18px; height: 18px;"></i> Our Values</h3>
+     <p>Alongside physical and tactical training, BNCC also encourages cadets to take part in social welfare activities, disaster response programs, and community service. Metropolitan University BNCC Platoon motivates students to become skilled, compassionate, and socially responsible individuals ready to serve the country.</p>
+    </div>
+   </section>
+
+   <section class="section" style="padding-top: 0;">
+    <h2 class="section-title">Igniting the Movement</h2>
+    <div class="content-card">
+     <h3><i data-lucide="flame" style="width: 18px; height: 18px;"></i> Our Journey</h3>
+     <p>Metropolitan University BNCC Platoon began its journey with the participation of nearly a hundred students. After a selection round held in May of last year, 24 cadets were officially chosen for the first batch, guided by a PUO and Army staff member.</p>
+    </div>
+    <div class="content-card">
+     <h3><i data-lucide="trending-up" style="width: 18px; height: 18px;"></i> Growth & Development</h3>
+     <p>With time, dedication, and teamwork, the platoon has grown into a unit of 30 cadets. The platoon now proudly includes one Sergeant, three Corporals, three Lance Corporals, and the remaining cadets, all working together with discipline and commitment.</p>
+    </div>
+   </section>
+
+   <section class="section" style="padding-top: 0;">
     <h2 class="section-title">Cadet List</h2>
     <div class="cadet-grid" id="cadetGrid"></div>
    </section>
@@ -110,6 +148,7 @@
           <div class="cadet-body">ID: ${c.id}</div>
         </div>
       `).join('');
+      lucide.createIcons();
     }
     document.addEventListener('DOMContentLoaded', renderCadets);
   </script>
